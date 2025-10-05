@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=SUSE+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #0F172A;
+            color: white;
+            font-family: 'poppins', sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 70px;
+            background-color: rgb(5, 5, 59);
+            opacity: 0;
+            animation: fadeIn 1.2s ease forwards;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 50px;
+            animation: bounceIn 1s ease forwards;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+            transition: transform 0.3s, color 0.3s;
+        }
+
+        .left {
+            margin-right: 500px;
+            font-size: 2rem;
+        }
+
+        a:hover {
+            color: rgb(0, 70, 21);
+            transform: scale(1.1) rotate(-2deg);
+        }
+
+        .namaste {
+            font-size: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            margin-top: 150px;
+            margin-left: 110px;
+        }
+
+        span {
+            color: aqua;
+        }
+
+        .intro-image img {
+            width: 320px;
+            height: 350px;
+            border-radius: 75px;
+            opacity: 0;
+            animation: slideRight 1.2s ease forwards 0.6s, floatImage 3s ease-in-out infinite;
+        }
+
+        .intro-image {
+            margin-left: 300px;
+        }
+
+        .paper {
+            margin: 30px auto;
+            max-width: 900px;
+            line-height: 1.7;
+            text-align: center;
+            font-family: "SUSE Mono", sans-serif;
+            opacity: 0;
+            animation: fadeInUp 1.2s ease forwards 0.3s;
+            font-size: 20px;
+        }
+
+        .logitech,
+        .rrr,
+        .java {
+            margin-right: 100px;
+            margin-top: 50px;
+            margin-left: 630px;
+            font-size: 30px;
+            text-decoration: underline;
+            opacity: 0;
+            animation: fadeIn 1.2s ease forwards;
+        }
+
+        .intro-text {
+            font-family: "SUSE Mono", sans-serif;
+            opacity: 0;
+            animation: slideLeft 1.2s ease forwards;
+            margin-bottom: 120px;
+        }
+
+        .python {
+            margin: 40px auto;
+            max-width: 600px;
+            opacity: 0;
+            animation: fadeInUp 1.2s ease forwards 0.3s;
+            text-align: center;
+        }
+
+        .btn {
+            display: inline-block;
+            background: aqua;
+            color: black;
+            padding: 10px 20px;
+            margin-right: 15px;
+            border-radius: 30px;
+            transition: 0.3s;
+            margin-top: 10px;
+            animation: pulseBtn 2s infinite;
+        }
+
+        
+
+        .cards {
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+            margin-left: 160px;
+            max-width: 1100px;
+            margin-right: 5px;
+            gap: 20px;
+            animation: fadeInUp 1.5s ease forwards;
+        }
+
+        .card {
+            background: #1E293B;
+            padding: 20px;
+            border-radius: 15px;
+            width: 250px;
+            height: 200px;
+            text-align: center;
+            transition: 0.3s;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+            align-content: center;
+            color: white;
+            transform: scale(1);
+        }
+
+        .card:hover {
+            transform: translateY(-12px) scale(1.05) rotate(1deg);
+            box-shadow: 0 0 25px rgba(0, 255, 255, 0.8);
+        }
+
+        h3 {
+            text-decoration: underline;
+            margin-bottom: 52px;
+            animation: fadeIn 2s ease forwards;
+        }
+
+        .m {
+            color: rgb(128, 49, 0);
+        }
+
+        .main {
+            animation: fadeIn 1.2s ease forwards, glowText 2s infinite alternate;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideLeft {
+            from {
+                transform: translateX(-50px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideRight {
+            from {
+                transform: translateX(50px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                transform: translateY(60px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes bounceIn {
+            0% {
+                transform: scale(0.3);
+                opacity: 0;
+            }
+
+            50% {
+                transform: scale(1.1);
+                opacity: 1;
+            }
+
+            70% {
+                transform: scale(0.9);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        @keyframes floatImage {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-15px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        @keyframes pulseBtn {
+            0% {
+                box-shadow: 0 0 0 0 rgba(0, 255, 255, 0.6);
+            }
+
+            70% {
+                box-shadow: 0 0 0 15px rgba(0, 255, 255, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(0, 255, 255, 0);
+            }
+        }
+
+        .puma {
+            color: aliceblue;
+            font-size: 12px;
+            text-align: center;
+            padding: 20px;
+            opacity: 0;
+            animation: fadeInUp 1.5s ease forwards;
+            background: rgba(255, 255, 255, 0.03);
+            box-shadow: 0 -5px 15px rgba(0, 255, 255, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">My Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact Me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <section class="firstsection">
+        <div class="namaste">
+            <div class="intro-text">
+                <b> Hi!, My Name is <span>Sai Samanvith</span><br>
+                    <div class="hi">and I Study in<br></div>
+                    Scaler School of Technology.<b>
+                       
+            </div>
+
+             <div class="intro-image">
+                <img src="./hi.jpg" alt="Profile photo">
+            </div>
+        </div>
+
+        <div id="about" class="main" style="margin-right: 100px;
+            margin-top: 50px;
+            margin-left: 650px;
+            font-size: 30px;
+            text-decoration: underline;">About Me</div>
+        <div class="paper">
+            Hi, I’m Sai Samanvith, a passionate technology enthusiast and aspiring developer.
+            I enjoy exploring how code can solve real-world problems and create meaningful user experiences.
+            Currently, I’m studying at Scaler School of Technology, where I’m building strong foundations in
+            programming, algorithms, and modern software practices.
+            <br><br>
+            When I’m not coding, I love watching and playing sports, learning new tech trends and challenging myself
+            with new skills.
+            My goal is to grow into a versatile software engineer who crafts clean, efficient, and impactful solutions.
+        </div><br><br><br><br><br><br><br><br><br>
+
+        <div id="services" class="logitech">Services</div>
+        <div class="cards">
+            <div class="card">
+                <h3>Web Development</h3>
+                <p>Building modern Websites using HTML and CSS with clean code</p>
+            </div>
+            <div class="card">
+                <h3>Java Programming</h3>
+                <p>I create simple Java Programmes and I work on beginner-level algorithmic challenges to build logical
+                    thinking and clean coding habits.</p>
+            </div>
+        </div><br><br><br><br><br><br>
+
+        <div id="projects" class="rrr">Projects</div>
+        <div class="cards">
+            <div class="card">
+                <h3>Portfolio</h3>
+                <p>A personal portfolio website to showcase my work and skills.</p>
+            </div>
+        </div><br><br><br><br><br><br><br>
+
+        <div id="contact" class="java">Contact Me</div>
+        <div class="python">
+            <div class="red">
+                <div><span>Contact Number : </span> <a href="tel:+919110239658" class="m">+91 9110239658</a></div><br>
+                <div><span>Email Address : </span> <a href="mailto:sai.samanvith0108@gmail.com" class="m">sai.samanvith0108@gmail.com</a></div><br>
+                <div><span>LinkedIn : </span> <a href="https://www.linkedin.com/in/sai-samanvith-98911437b" target="_blank" class="m">https://www.linkedin.com/in/sai-samanvith-98911437b</a></div><br>
+            </div>
+        </div>
+    </section>
+    <footer class="puma">© 2025 Samanvith | Built with 🔥 using HTML & CSS</footer>
+</body>
+</html>
