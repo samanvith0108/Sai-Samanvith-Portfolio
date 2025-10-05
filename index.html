@@ -68,6 +68,7 @@
             justify-content: flex-start;
             margin-top: 150px;
             margin-left: 110px;
+            flex-wrap: wrap;
         }
 
         span {
@@ -136,8 +137,6 @@
             animation: pulseBtn 2s infinite;
         }
 
-        
-
         .cards {
             display: flex;
             justify-content: center;
@@ -147,6 +146,7 @@
             margin-right: 5px;
             gap: 20px;
             animation: fadeInUp 1.5s ease forwards;
+            flex-wrap: wrap;
         }
 
         .card {
@@ -282,6 +282,120 @@
             background: rgba(255, 255, 255, 0.03);
             box-shadow: 0 -5px 15px rgba(0, 255, 255, 0.1);
         }
+
+       
+        @media (max-width: 992px) {
+            .left {
+                margin-right: 200px;
+                font-size: 1.6rem;
+            }
+
+            nav ul li {
+                margin: 0 25px;
+            }
+
+            .intro-image {
+                margin-left: 100px;
+            }
+
+            .intro-image img {
+                width: 260px;
+                height: 280px;
+            }
+
+            .paper {
+                font-size: 18px;
+                padding: 0 20px;
+            }
+
+            .logitech,
+            .rrr,
+            .java {
+                margin-left: 0;
+                text-align: center;
+            }
+
+            .cards {
+                margin-left: 0;
+            }
+        }
+
+        
+        @media (max-width: 600px) {
+            nav {
+                flex-direction: column;
+                height: auto;
+                padding: 10px;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            .left {
+                margin-right: 0;
+                font-size: 1.5rem;
+                margin-bottom: 10px;
+            }
+
+            .namaste {
+                flex-direction: column;
+                align-items: center;
+                margin-left: 0;
+                margin-top: 100px;
+                text-align: center;
+            }
+
+            .intro-image {
+                margin-left: 0;
+                margin-top: 20px;
+            }
+
+            .intro-image img {
+                width: 220px;
+                height: 250px;
+                border-radius: 50px;
+            }
+
+            .paper {
+                font-size: 16px;
+                padding: 0 15px;
+            }
+
+            .logitech,
+            .rrr,
+            .java {
+                margin-left: 0;
+                margin-right: 0;
+                text-align: center;
+                font-size: 24px;
+            }
+
+            .cards {
+                flex-direction: column;
+                align-items: center;
+                margin: 0 auto;
+            }
+
+            .card {
+                width: 80%;
+                height: auto;
+            }
+
+            .python {
+                width: 90%;
+                font-size: 14px;
+            }
+
+            .puma {
+                font-size: 10px;
+            }
+        }
     </style>
 </head>
 
@@ -306,10 +420,9 @@
                 <b> Hi!, My Name is <span>Sai Samanvith</span><br>
                     <div class="hi">and I Study in<br></div>
                     Scaler School of Technology.<b>
-                       
             </div>
 
-             <div class="intro-image">
+            <div class="intro-image">
                 <img src="./hi.jpg" alt="Profile photo">
             </div>
         </div>
@@ -355,11 +468,15 @@
         <div class="python">
             <div class="red">
                 <div><span>Contact Number : </span> <a href="tel:+919110239658" class="m">+91 9110239658</a></div><br>
-                <div><span>Email Address : </span> <a href="mailto:sai.samanvith0108@gmail.com" class="m">sai.samanvith0108@gmail.com</a></div><br>
-                <div><span>LinkedIn : </span> <a href="https://www.linkedin.com/in/sai-samanvith-98911437b" target="_blank" class="m">https://www.linkedin.com/in/sai-samanvith-98911437b</a></div><br>
+                <div><span>Email Address : </span> <a href="mailto:sai.samanvith0108@gmail.com"
+                        class="m">sai.samanvith0108@gmail.com</a></div><br>
+                <div><span>LinkedIn : </span> <a href="https://www.linkedin.com/in/sai-samanvith-98911437b"
+                        target="_blank"
+                        class="m">https://www.linkedin.com/in/sai-samanvith-98911437b</a></div><br>
             </div>
         </div>
     </section>
     <footer class="puma">© 2025 Samanvith | Built with 🔥 using HTML & CSS</footer>
 </body>
+
 </html>
